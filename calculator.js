@@ -7,13 +7,13 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true}));
 
  
-app.get("/bmiCalculator", (req, res) => {
+app.get("/", (req, res) => {
     
-    res.sendFile(__dirname + "/bmiCalculator.html");
+    res.sendFile(__dirname + "/index.html");
     
 });
  
-app.post("/bmiCalculator", (req, res) => {
+app.post("/", (req, res) => {
     
     var Weight = parseFloat(req.body.Weight);
     var Height = parseFloat(req.body.Height);
